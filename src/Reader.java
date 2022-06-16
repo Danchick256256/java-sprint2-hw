@@ -5,7 +5,7 @@ import java.util.Map;
 import java.util.HashMap;
 
 
-public class Reader { // подгрузка и обработка отчетов
+public class Reader {
     private final String currentYear = "2021";
     public Map<String, String> monthsList = new HashMap<>();
 
