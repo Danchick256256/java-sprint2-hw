@@ -1,11 +1,13 @@
 import java.util.Scanner;
 
 
+
+// Мне помог один из учеников, но у меня проблема с выводом месячных отчетов, я создал классы для хранения данных, но с месячным отчетом не работает помогите пожалуйста
+
 public class Main {
 
     public static Reader reader = new Reader();
-    public static ShowMonth showMonth = new ShowMonth();
-    public static ShowYear showYear = new ShowYear();
+
     public static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
@@ -17,21 +19,19 @@ public class Main {
 
             if (userInput == 1) {
                 reader.readMonth();
-                break;
 
             } else if (userInput == 2) {
                 reader.readYear();
-                break;
 
             } else if (userInput == 3) {
                 break;
                 // не понимаю как реализовать этот метод
             } else if (userInput == 4) {
-                ShowMonth.showMonth();
+                ShowMonth.showMonth(reader.monthsList, reader.monthMemories);
                 break;
 
             } else if (userInput == 5) {
-                ShowYear.showYear();
+                ShowYear.showYear(reader.monthsList, reader.yearMemory.currentYear, reader.yearMemory.incomeList, reader.yearMemory.expensesList);
                 break;
 
             } else {
