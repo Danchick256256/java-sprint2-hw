@@ -7,6 +7,7 @@ import java.util.Scanner;
 public class Main {
 
     public static Reader reader = new Reader();
+    public static Comparison comparison = new Comparison();
 
     public static Scanner scanner = new Scanner(System.in);
 
@@ -24,8 +25,8 @@ public class Main {
                 reader.readYear();
 
             } else if (userInput == 3) {
+                comparison.comparison(reader.monthsList, reader.monthMemories, reader.yearMemory);
                 break;
-                // не понимаю как реализовать этот метод
             } else if (userInput == 4) {
                 ShowMonth.showMonth(reader.monthsList, reader.monthMemories);
                 break;

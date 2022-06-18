@@ -7,7 +7,7 @@ import java.util.HashMap;
 
 public class Reader {
     public YearMemory yearMemory;
-    public MonthMemory[] monthMemories;
+    public MonthMemory[] monthMemories = new MonthMemory[3];
 
     private final String currentYear = "2021";
     public Map<String, String> monthsList = new HashMap<>();
@@ -16,15 +16,6 @@ public class Reader {
         monthsList.put("01", "Январь");
         monthsList.put("02", "Февраль");
         monthsList.put("03", "Март");
-        monthsList.put("04", "Апрель");
-        monthsList.put("05", "Май");
-        monthsList.put("06", "Июнь");
-        monthsList.put("07", "Июль");
-        monthsList.put("08", "Август");
-        monthsList.put("09", "Сентябрь");
-        monthsList.put("10", "Октябрь");
-        monthsList.put("11", "Ноябрь");
-        monthsList.put("12", "Декабрь");
     }
 
     public void readMonth() {
@@ -32,7 +23,7 @@ public class Reader {
 
         for (String monthNumber : monthsList.keySet()) {
 
-            Path filePath = Path.of("./resources/" + "m." + currentYear + monthNumber + ".csv"); // creating file path
+            Path filePath = Path.of("resources/" + "m." + currentYear + monthNumber + ".csv"); // creating file path
 
             if (Files.exists(filePath)) { // checking file exists
                 try {
@@ -66,7 +57,7 @@ public class Reader {
     public void readYear() {
         Map<String, Integer> incomeList = new HashMap<>();
         Map<String, Integer> expensesList = new HashMap<>();
-        Path filePath = Path.of("./resources/" + "y." + currentYear + ".csv");
+        Path filePath = Path.of("resources/" + "y." + currentYear + ".csv");
         try {
             String rawData = Files.readString(filePath);
 
