@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 
 
-// Мне помог один из учеников, но у меня проблема с выводом месячных отчетов, я создал классы для хранения данных, но с месячным отчетом не работает помогите пожалуйста
+// Да, строчка была изменена намерено, спасибо вам за помощь
 
 public class Main {
 
@@ -20,21 +20,14 @@ public class Main {
 
             if (userInput == 1) {
                 reader.readMonth();
-
             } else if (userInput == 2) {
                 reader.readYear();
-
             } else if (userInput == 3) {
                 comparison.comparison(reader.monthsList, reader.monthMemories, reader.yearMemory);
-                break;
             } else if (userInput == 4) {
                 ShowMonth.showMonth(reader.monthsList, reader.monthMemories);
-                break;
-
             } else if (userInput == 5) {
                 ShowYear.showYear(reader.monthsList, reader.yearMemory.currentYear, reader.yearMemory.incomeList, reader.yearMemory.expensesList);
-                break;
-
             } else {
                 break;
             }
